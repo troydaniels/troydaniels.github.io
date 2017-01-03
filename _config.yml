@@ -13,17 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: code every day
+title: try {
 email: troyaadaniels@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I want to improve my programming, so I'm going to work on it every day throughout 2017.
+  Everytime I see an interesting programming course/guide/etc on HN I send it to myself for later. I have 50 of these courses sitting in my inbox now, and throughout 2017 I'm going to tackle as many as possible.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  troydaniels
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-tactile
+theme: minima
 gems:
   - jekyll-feed
 exclude:
