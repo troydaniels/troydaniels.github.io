@@ -4,5 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Everytime I see an interesting programming course/guide/etc on HN I send it to myself for later.
-I have some 50 odd courses sitting in my inbox now, and throughout 2017 I'm going to tackle as many as possible.
+Troy. 29, UNSW maths graduate, and lover of all things logic and programming (and [food]).
+
+Looking forward to learning something new.
+
+[food]: http://www.whiteboyeats.com.au
