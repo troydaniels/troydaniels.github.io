@@ -8,7 +8,7 @@ categories: DIKU Compiler Course
 I've read through the second chapter on lexical analysis a couple of times now.  
 Somehow I don't think (non-)deterministic finite automita featured heavily in my last compiler course (else perhaps my memory isn't quite what I'd thought).
 
-But, not to worry. It all makes sense - we're going to tokenize and classify strings from whatever language we're compiling - with [N|D]FA giving some framework with which to talk about this process.  
+But, not to worry. It all makes sense - we're going to tokenize and classify strings from whatever language we're compiling - with [N|D]FA giving a framework with which to talk about this process.  
 And of course I've realised, I need to now make some really important decisions - the most important of which:
 
 #### What am I trying to achieve?
@@ -25,7 +25,7 @@ Well, I'd be happy with something that is [Turing complete]*, whilst being a lit
 
 
 So, in the interests of readability, I have in mind a simple impertive language, with only a small subset of features:  
-1. A ```while``` loop 
+1. A ```while``` loop  
 2. Varables names comprised of only ASCII letters  
 3. Variables which can hold a string, float or integer  
 4. A ```print``` function  
