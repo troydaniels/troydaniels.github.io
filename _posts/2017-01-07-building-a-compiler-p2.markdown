@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DIKU - defining the language"
+title:  "DIKU - Defining the language"
 date:   2017-01-07 20:35:12 +1100
 categories: DIKU Compiler Course
 ---
