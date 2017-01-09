@@ -36,6 +36,3 @@ exclude:
 
 # Google Analytics
 google_analytics: UA-89995885-1
-
-# Disqus shortcode
-disqus: troydaniels.disqus.com
