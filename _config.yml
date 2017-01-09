@@ -15,11 +15,14 @@
 # in the templates via {{ site.myvariable }}.
 title: try {
 email: troyaadaniels@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Everytime I see an interesting programming course/guide/etc on HN I send it to myself for later. I have 50 of these courses sitting in my inbox now, and throughout 2017 I'm going to tackle as many as possible.
+description:
+  Everytime I see an interesting programming course/guide/etc on HN I send it to myself for later. I have 50 of these sitting in my inbox now, and throughout 2017 I'm going to tackle as many as possible.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  troydaniels
+author: Troy Daniels
+
+footer_heading: Get in touch
 
 # Build settings
 markdown: kramdown
