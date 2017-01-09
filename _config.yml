@@ -26,6 +26,13 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Google Analytics
+google_analytics: UA-89995885-1
+
+# Disqus shortcode
+disqus: troydaniels.disqus.com

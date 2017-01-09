@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Defining the language"
 date:   2017-01-07 20:35:12 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 I've read through the second chapter on lexical analysis a couple of times now.  
@@ -49,3 +50,5 @@ And since my C is a little rusty, and I'd prefer to leverage a scripting languag
 ---
 <br>   
 _*The two caveats being that of course computers don't have infinite memory, and that I'd like to see my language in action, so I'll be printing to the screen._
+
+
