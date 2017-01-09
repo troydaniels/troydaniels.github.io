@@ -30,7 +30,7 @@ So, in the interests of readability, I have in mind a simple impertive language,
 2. Varables names comprised of only ASCII letters  
 3. Variables which can hold a string, float or integer  
 4. A ```print``` function  
-5. The usual operators ```*```, ```/```, ```+```, ```-``` and ```=```  
+5. The usual mathematical operators ```*```, ```/```, ```+```, ```-``` and ```=```  
 6. The usual delimeters ```{```, ```}```, ```(```, ```)``` and ```;```  
 7. The usual logical operators ```<```, ```>```, ```==```  
 
