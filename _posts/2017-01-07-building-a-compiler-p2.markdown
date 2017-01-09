@@ -28,7 +28,7 @@ Well, I'd be happy with something that is [Turing complete]*, whilst being a lit
 So, in the interests of readability, I have in mind a simple impertive language, with only a small subset of features:  
 1. A ```while``` loop  
 2. Varables names comprised of only ASCII letters  
-3. Variables which can hold a string, float or integer  
+3. Variables which can hold an ASCII string, float or integer  
 4. A ```print``` function  
 5. The usual mathematical operators ```*```, ```/```, ```+```, ```-``` and ```=```  
 6. The usual delimeters ```{```, ```}```, ```(```, ```)``` and ```;```  
@@ -40,8 +40,22 @@ For example, the following simple program would be valid:
     while( n < 10 ) {  
        print "This is itteration number ";  
        print n;
+       print "\n";
        n = n + 1;
     }   
+
+and result in the following output:
+
+    This is itteration number 1
+    This is itteration number 2
+    This is itteration number 3
+    This is itteration number 4
+    This is itteration number 5
+    This is itteration number 6
+    This is itteration number 7
+    This is itteration number 8
+    This is itteration number 9
+    This is itteration number 10
 
 But that should be Turing complete.
 <br>
