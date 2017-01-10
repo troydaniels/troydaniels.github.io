@@ -44,7 +44,7 @@ Print:
 
 I think this gives an unambiguous grammar (I'll spend some time thinking about that though), and my understanding is that the higher in the grammar a production appears, the lower its precedence, which means operators in this language should have the precedence they do in ordinary maths.
 
-Next, to use this grammar to build the parser, where each non-terminal will have it's own method.
+Next, to use this grammar to build the parser, wherein each non-terminal will have it's own method.
 
 
 ---  
