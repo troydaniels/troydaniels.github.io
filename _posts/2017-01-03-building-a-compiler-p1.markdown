@@ -3,7 +3,6 @@ layout: post
 title:  "DIKU - Introductory compiler course"
 date:   2017-01-03 14:27:00 +1100
 categories: DIKU Compiler Course
-comments: true
 ---
 
 Well, first project. Lets write a compiler.
