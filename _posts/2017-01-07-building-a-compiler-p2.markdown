@@ -31,7 +31,7 @@ So, in the interests of readability (and sanity), I have in mind a simple impert
 4. A ```print``` function  
 5. The usual mathematical operators ```*```, ```/```, ```+```, ```-``` and ```=```  
 6. The usual delimeters ```{```, ```}```, ```(```, ```)``` and ```;```  
-7. The usual logical operators ```<```, ```>```, ```==```  
+7. The usual comparison operators ```<```, ```>```, ```==```  
 
 For example, the following simple program would be valid:  
 
