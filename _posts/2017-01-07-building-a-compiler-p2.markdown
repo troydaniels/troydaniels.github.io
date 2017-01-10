@@ -24,9 +24,9 @@ Well, I'd be happy with something that is [Turing complete]*, whilst being a lit
 [Brainfuck]: https://en.wikipedia.org/wiki/Brainfuck
 
 
-So, in the interests of readability, I have in mind a simple impertive language, with only a small subset of features:  
+So, in the interests of readability (and sanity), I have in mind a simple impertive language, with only a small subset of features:  
 1. A ```while``` loop  
-2. Varables names comprised of only ASCII letters  
+2. Varable names comprised of only ASCII letters  
 3. Variables which can hold an ASCII string, float or integer  
 4. A ```print``` function  
 5. The usual mathematical operators ```*```, ```/```, ```+```, ```-``` and ```=```  
