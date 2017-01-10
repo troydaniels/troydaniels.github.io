@@ -60,8 +60,10 @@ But that should be Turing complete.
 <br>
 And since my C is a little rusty, and I'd prefer to leverage a scripting language, I'm going to write the whole compiler in PHP.  
 <br>
+
 ---
+
 <br>   
-_*The two caveats being that of course computers don't have infinite memory, and that I'd like to see my language in action, so I'll be printing to the screen._
+_*The two caveats being that of course computers don't have infinite memory, and that I'd like to see my language in action, so I'll have a print function._
 
 
