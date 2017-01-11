@@ -27,7 +27,7 @@ Assignment:
     <exp_3> => 
 		<exp_4> ( [ MULTIPLY | DIVIDE ] <exp_4> )*
     <exp_4> => 
-		VARIABLE | INTEGER | L_BRA <exp_1> R_BRA
+		VARIABLE | ( PLUS | MINUS )? INTEGER | L_BRA <exp_1> R_BRA
 
 Statement:
 
