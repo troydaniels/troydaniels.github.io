@@ -32,7 +32,7 @@ Assignment:
 Statement:
 
     <statement> =>
-		WHILE L_BRA ( <exp_1> )* R_BRA L_PAR ( <block> )* R_PAR
+		WHILE L_BRA ( <exp_1> ) R_BRA L_PAR ( <block> )* R_PAR
     <block> =>
 		( <print> )* | ( <assignment> ) *
 
