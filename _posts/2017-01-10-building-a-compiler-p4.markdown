@@ -39,7 +39,7 @@ Statement:
 Print:
 
     <print> =>
-	PRINT [ VARIABLE | INTEGER | QUOTED_STRING ] SEMICOLON
+		PRINT [ VARIABLE | INTEGER | QUOTED_STRING ] SEMICOLON
 
 
 I think this gives an unambiguous grammar (I'll spend some time thinking about that though), and my understanding is that the higher in the grammar a production appears, the lower its precedence, which means operators in this language should have the precedence they do in ordinary maths.
