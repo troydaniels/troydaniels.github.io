@@ -44,19 +44,19 @@ Taking the ```assignment()``` function as an example:
 {% highlight php startinline %}
 // <assignment> => VARIABLE ASSIGN [ <exp_1> | QUOTED_STRING ] SEMICOLON
 function assignment() {
-  $variable = new Element( $this->currentToken['symbol'], $this->currentToken['value'], null, null );
-  self::consume("VARIABLE");
-  $assign = new BinaryOperation( $this->currentToken['symbol'], null, $variable, null );
-  self::consume("ASSIGN");
-  if( $this->currentToken['symbol'] === "QUOTED_STRING" ) {
-    $string = new Element( $this->currentToken['symbol'], $this->currentToken['value'], null, null );
-    $assign->right = $string;
-    $this->consume("QUOTED_STRING");
-  } else {
-    $assign->right = self::exp_1();
-  }
-  self::consume("SEMICOLON");
-   return $assign;
+    $variable = new Element( $this->currentToken['symbol'], $this->currentToken['value'], null, null );
+    self::consume("VARIABLE");
+    $assign = new BinaryOperation( $this->currentToken['symbol'], null, $variable, null );
+    self::consume("ASSIGN");
+    if( $this->currentToken['symbol'] === "QUOTED_STRING" ) {
+        $string = new Element( $this->currentToken['symbol'], $this->currentToken['value'], null, null );
+        $assign->right = $string;
+        $this->consume("QUOTED_STRING");
+    } else {
+        $assign->right = self::exp_1();
+    }
+    self::consume("SEMICOLON");
+    return $assign;
 }
 {% endhighlight %}
   
@@ -65,6 +65,6 @@ It uses a helper function, ```consume()```, to check the symbol of the current t
 
 In this example, if the ```VARIABLE``` is not ```ASSIGN```-ed to a ```QUOTED_STRING```, it calls the function ```exp_1```. In a similar way, some of the grammar productions allow recursion, hence the name of this style of parser.
 
-Adding these functions became easier as I became familiar with how they fit in with the grammar, with the exception of the ```statement()``` function, which can span several lines of input - thus leading to an edge case where the lexer would return a ```null``` is it encountered the end of a line.
+Adding these functions became easier as I became familiar with how they fit in with the grammar, with the exception of the ```statement()``` function, which can span several lines of input - thus leading to an edge case where the lexer would return a ```null``` if it encountered the end of a line.
 
 All said and done, I'm quite happy. On to the next chapter!
