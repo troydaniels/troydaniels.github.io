@@ -14,7 +14,7 @@ The parser's task is to take sequential tokens from the lexer, and determine if 
 
 [abstract syntax tree]: https://en.wikipedia.org/wiki/Abstract_syntax_tree
 
-The parser's ```run()``` method itterates through the lines of an open filehandle, passed as an argument.  
+The parser's ```run()``` method iterates through the lines of an open filehandle, passed as an argument.  
 Reflecting on the grammar, we can see that there are only three valid symbols for the first token in any line - ```PRINT```, ```WHILE``` or ```VARIABLE``` - which we can test 
 for:
 
