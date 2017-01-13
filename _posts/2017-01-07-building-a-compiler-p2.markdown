@@ -45,6 +45,7 @@ For example, the following simple program would be valid:
 
 and result in the following output:
 
+    This is itteration number 0
     This is itteration number 1
     This is itteration number 2
     This is itteration number 3
@@ -54,7 +55,6 @@ and result in the following output:
     This is itteration number 7
     This is itteration number 8
     This is itteration number 9
-    This is itteration number 10
 
 But that should be Turing complete.
 <br>
