@@ -21,11 +21,11 @@ As discussed in chapter 4 of [the text], a key requirement for an interpreter is
 The symbol table and its methods are absracted away into the ```SymbolTable``` class.  
 As the language only has a single scope, the symbol table is implemented as a simple string indexed array. To allow for multiple scopes, this implementation would have to be modified. 
 
-This class has two methods, ```SymbolTable::bind()``` and ```SymbolTable::lookup()```, which allow for a variable name to be bound to some data (ie, ```n = 1```), and for the data associated with a variable to be retrieved.  
+This class has two methods, ```SymbolTable->bind()``` and ```SymbolTable->lookup()```, which allow for a variable name to be bound to some data (ie, ```n = 1```), and for the data associated with a variable to be retrieved.  
 If a ```lookup``` is performed on a variable that has not been ```bound```, a warning message is printed - however execution will continue.
 
 All file-handling logic has been moved into ```Interpreter.php```.
-The ```Interpreter::run()``` method itterates through the AST array returned by ```Parser::run()```, and traverses the tree recursively in postorder:
+The ```Interpreter->run()``` method itterates through the AST array returned by ```Parser->run()```, and traverses the tree recursively in postorder:
 
 ```
 ...
@@ -53,8 +53,8 @@ function interpret_LESS_THAN( $node ) {
 }
 ```
 
-```Interpreter::interpret_WHILE()``` is the only real non-trivial method in this class, recursing on ```Interpreter::postorderTraversal()```, allowing for nested ```while``` loops, and for the ```while``` logical block to span several new lines.  
-A variable named```nextInstruction``` was added to the ```Node``` class to accomplish this, as well as a check in ```Interpreter::postorderTraversal()```, actioning the execution any additional ```while``` block instruction.
+```Interpreter->interpret_WHILE()``` is the only real non-trivial method in this class, recursing on ```Interpreter->postorderTraversal()```, allowing for nested ```while``` loops, and for the ```while``` logical block to span several new lines.  
+A variable named```nextInstruction``` was added to the ```Node``` class to accomplish this, as well as a check in ```Interpreter->postorderTraversal()```, actioning the execution of any additional ```while``` block instructions.
 
 In the same way, the ```ASTarray[]``` within the ```Parser``` class could be modified to a single AST representation, but for now I'm quite happy with the implementation.
 
