@@ -41,7 +41,7 @@ The ```Interpreter->run()``` method itterates through the AST array returned by 
 ...
 ```
 
-With the last line of the above snippet calling ```Interpreter::interpret_{$node['symbol']}```.
+With the last line of the above snippet calling ```Interpreter->interpret_{$node['symbol']}```.
 
 To take an explicit example, the operation ```n < 2``` would cause the following method to be called:
 
