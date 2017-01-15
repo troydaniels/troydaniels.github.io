@@ -12,17 +12,19 @@ You can view the implementation [here].
 
 In this post, I'll run through the new classes and logic that makes this possible.
 
-As discussed in chapter 4 of [the text], a key requirement for this is a symbol table, to hold the value of each variable, within each lexical scope.
+---
+<br>
+As discussed in chapter 4 of [the text], a key requirement for an interpreter is a symbol table, to hold the state of each variable, within each lexical scope.
 
 [the text]: http://www.diku.dk/~torbenm/Basics/basics_lulu2.pdf
 
-The symbol table and its methods are absracted away into the ```SymbolTable]``` class.  
-As the language only has a single scope, the symbol table is implemented as a simple string indexed array. To allow for multiple scopes, this implementation would have to be changed. 
+The symbol table and its methods are absracted away into the ```SymbolTable``` class.  
+As the language only has a single scope, the symbol table is implemented as a simple string indexed array. To allow for multiple scopes, this implementation would have to be modified. 
 
 This class has two methods, ```SymbolTable::bind()``` and ```SymbolTable::lookup()```, which allow for a variable name to be bound to some data (ie, ```n = 1```), and for the data associated with a variable to be retrieved.  
 If a ```lookup``` is performed on a variable that has not been ```bound```, a warning message is printed - however execution will continue.
 
-All filehandling logic has been moved into ```Interpreter.php```.
+All file-handling logic has been moved into ```Interpreter.php```.
 The ```Interpreter::run()``` method itterates through the AST array returned by ```Parser::run()```, and traverses the tree recursively in postorder:
 
 ```
