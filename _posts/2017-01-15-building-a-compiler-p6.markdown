@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DIKU - Walking through the interpreter"
-date:   2017-01-12 20:12:12 +1100
+date:   2017-01-15 20:12:12 +1100
 categories: DIKU Compiler Course
 ---
 
@@ -27,8 +27,7 @@ If a ```lookup``` is performed on a variable that has not been ```bound```, a wa
 All file-handling logic has been moved into ```Interpreter.php```.
 The ```Interpreter->run()``` method itterates through the AST array returned by ```Parser->run()```, and traverses the tree recursively in postorder:
 
-```
-...
+{% highlight php startinline=true %}
 // Recurse to bottom, and traverse child nodes left to right
   if( $left instanceof Node ) {
     self::postorderTraversal( $left );
@@ -38,26 +37,25 @@ The ```Interpreter->run()``` method itterates through the AST array returned by 
 
   // Now, call relevant method for this node
   $this->previousCalc = $this->{"interpret_" . $symbol}( $node );
-...
-```
+{% endhighlight %}
 
 With the last line of the above snippet calling ```Interpreter->interpret_{$node['symbol']}```.
 
 To take an explicit example, the operation ```n < 2``` would cause the following method to be called:
 
-```
+{% highlight php startinline=true %}
 function interpret_LESS_THAN( $node ) {
   $left = $this->symbolTable->lookup($node->left);
   $right = $this->symbolTable->lookup($node->right);
   return ($left < $right);       
 }
-```
+{% endhighlight %}
 
 ```Interpreter->interpret_WHILE()``` is the only real non-trivial method in this class, recursing on ```Interpreter->postorderTraversal()```, allowing for nested ```while``` loops, and for the ```while``` logical block to span several new lines.  
 A variable named```nextInstruction``` was added to the ```Node``` class to accomplish this, as well as a check in ```Interpreter->postorderTraversal()```, actioning the execution of any additional ```while``` block instructions.
 
 In the same way, the ```ASTarray[]``` within the ```Parser``` class could be modified to a single AST representation, but for now I'm quite happy with the implementation.
-
+  
 For me, a key takeaway is that the logic in the ```Interpreter``` class is in some ways very similar to the ```Parser``` class, in the same way that the ```Parser``` class is to the ```Lexer``` class - with each dealing with higher and higher levels of abstraction.
 
 
