@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DIKU - Stepping through Java bytecode"
+title:  "DIKU - Hello world in Java bytecode"
 date:   2017-01-18 23:11:01 +1100
 categories: DIKU Compiler Course
 ---
