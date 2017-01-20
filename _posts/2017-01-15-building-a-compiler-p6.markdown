@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Walking through the interpreter"
 date:   2017-01-15 20:12:12 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 After several hours coding, I am happy to say that the language now has an interpreter!  

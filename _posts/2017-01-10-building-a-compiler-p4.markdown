@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Defining a grammar"
 date:   2017-01-10 20:57:12 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 I've altered the ```Lexer``` class as I've realised it should have a ```next()``` method to return the *next* token from a string, rather than parse it in one go.  

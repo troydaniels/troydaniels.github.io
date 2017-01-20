@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Walking through the lexer"
 date:   2017-01-08 19:01:33 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 The lexer is finished, and it was surprisingly simple to implement.  

@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Walking through the parser"
 date:   2017-01-12 10:30:41 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 I've just finished writing a recursive descent parser, and I'm really quite happy with it.  

@@ -3,6 +3,7 @@ layout: post
 title:  "DIKU - Hello world in Java bytecode"
 date:   2017-01-18 23:11:01 +1100
 categories: DIKU Compiler Course
+comments: true
 ---
 
 The next milestone for my language is being able to compile down to target the JVM.  
