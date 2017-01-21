@@ -26,7 +26,7 @@ All of the 'heavy lifting' is handled by the ```Compiler``` class, with the bytc
 
 Internally, the contents of the output file is stored as a string - with php's ```pack()``` function used to format this string to hexidecimal, before being saved to a file, ```a.class```.
 
-The class uses two helper functions, ```strToHex()``` and ```paddedHex()``` - the latter converting a decimal integer to hexidecimal, padded to the left by 0s, such that the returned string's length is a multiple of another integer passes as an argument.
+```Bytecode``` uses two helper functions, ```strToHex()``` and ```paddedHex()``` - the latter converting a decimal integer to hexidecimal, padded to the left by 0s, such that the returned string's length is a multiple of another integer passes as an argument.
 
 ---
 <br>
