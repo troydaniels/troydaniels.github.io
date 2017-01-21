@@ -11,7 +11,7 @@ You can view the source [here].
 
 [here]: https://github.com/troydaniels/DIKU-Compiler-Course/blob/master/src/Bytecode.php
 
-The following shows in action on our initial sample program:
+The following shows the compiler in action on our initial sample program:
 
 ![Targetting the JVM](https://raw.githubusercontent.com/troydaniels/troydaniels.github.io/master/_img/targeting-the-jvm.png)
 
@@ -34,4 +34,4 @@ This project could well be extended beyond its current features to create a rich
 
 [repository]:https://github.com/troydaniels/DIKU-Compiler-Course
 
-For me though, it's time to move on to the next project!  
+For me though, whilst we could push this a little further, say to x86, I feel it's time to move on to the next project.
