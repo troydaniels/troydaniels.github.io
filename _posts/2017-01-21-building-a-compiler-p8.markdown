@@ -11,7 +11,7 @@ You can view the source [here].
 
 [here]: https://github.com/troydaniels/DIKU-Compiler-Course/blob/master/src/Bytecode.php
 
-![Targetting the JVM](/_img/targeting-the-jvm.png)
+![Targetting the JVM](https://raw.githubusercontent.com/troydaniels/troydaniels.github.io/master/_img/targeting-the-jvm.png)
 
 This last step was by far the most frustrating, but also the most rewarding. I'm really glad it's finished, and working.  
 
