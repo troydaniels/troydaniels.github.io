@@ -21,7 +21,7 @@ There are a lot of magic numbers in the the new ```Bytecode``` class, but I feel
 
 [last post]: https://troydaniels.github.io/diku/compiler/course/2017/01/18/building-a-compiler-p7.html
 
-And as many of the basic class features are more or less unchanged for our purposes, there aren't too many non-trival features in this class, the most dificult task being having to keep track of 'index' locations in Java's *constant pool* data structure as new strings are added.  
+And as many of the basic Java class features are more or less unchanged for our purposes, there aren't too many non-trival features in the ```Bytecode``` class, the most dificult task being having to keep track of 'index' locations in Java's *constant pool* data structure as new strings are added.  
 All of the 'heavy lifting' is handled by the ```Compiler``` class, with the bytcode simply printing out a series of strings.
 
 Internally, the contents of the output file is stored as a string - with php's ```pack()``` function used to format this string to hexidecimal, before being saved to a file, ```a.class```.
