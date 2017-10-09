@@ -35,6 +35,8 @@ myLast [x] = x
 myLast (x:xs) = myLast xs
 {% endhighlight %}
 
+Apart from what feels like slightly awkward syntax, this and the next few answers are pretty trivial. The LHS of the equality behaves a bit like a switch, and taking this example, we simply recurse on the tail of the list until we reach the last element. 
+
 2: Find the last but one element of a list.
 {% highlight hs startinline=true %}
 myButLast :: [a] -> a
@@ -50,6 +52,8 @@ elementAt [] n = error "Empty list."
 elementAt (x:_) 1  = x
 elementAt (x:xs) n = elementAt xs (n-1)
 {% endhighlight %}
+
+Similarly here, we recurse again on the tail, decreasing a counter as we go. When the counter reaches 1, we return the next element.
 
 4: Find the number of elements of a list.
 {% highlight hs startinline=true %}
@@ -73,15 +77,19 @@ isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome xs = xs == reverse xs
 {% endhighlight %}
 
+Rather pleasing - we call ```reverse``` on a string, test for equality, and return the result as a ```Bool```.
+
 7: Flatten a nested list structure.
 {% highlight hs startinline=true %}
 data NestedList a = Elem a | List [NestedList a]
 
 flatten :: NestedList a -> [a]
-flatten (Elem a   )   = [a]
+flatten (Elem a)   = [a]
 flatten (List (x:xs)) = flatten x ++ flatten (List xs)
 flatten (List [])     = []
 {% endhighlight %}
+
+A little more complex this time, we have to define our own data type (of which the definition itself is recursive), and then we recurse in two different directions, concatenating and returning the answer.
 
 8:  Eliminate consecutive duplicates of list elements.
 {% highlight hs startinline=true %}
@@ -93,6 +101,10 @@ compress (x:xs)
     | otherwise       = (x : compress xs)
 {% endhighlight %}
 
+Slightly more complex again, two guard statemtents on the last line test to see if there is a duplicate element, and recurses on the remainder of the list. We've also stated explicitly in the function definition that we're testing for equality over ```a``` - which isn't strictly necessary in this question, however I have found becomes increasingly important to avoid pesky compiler errors as the functions (and their types) become increasingly complex.
+
+I heard on a podcast today that said that a running joke amongst Haskell programmers says, you'll know you function works when the compiler stops complaining, which so far seems fairly accurate.
+
 9: Pack consecutive duplicates of list elements into sublists. If a list contains repeated elements they should be placed in separate sublists.
 {% highlight hs startinline=true %}
 pack :: Eq a => [a] -> [[a]]
@@ -102,6 +114,9 @@ pack (x:xs)
   |  (x == head xs) = (x:head (pack xs)):tail (pack xs)
   | otherwise = [x]:pack xs
 {% endhighlight %}
+
+At this point, I found myself slowing down considerably, having to think more thoroughly about how to define the problem recursively. In the first guard statement, we're recursing in two separate directions, and it takes some thought to convince yourself that that this statement indeed yields the desired structure.
+
 
 10: Run-length encoding of a list. Use the result of problem P09 to implement the so-called run-length encoding data compression method. Consecutive duplicates of elements are encoded as lists (N E) where N is the number of duplicates of the element E.
 {% highlight hs startinline=true %}
@@ -115,3 +130,8 @@ pack (x:xs)
 encode :: Eq b => [b] -> [(Int, b)]
 encode (xs) = [(length x, head x) | x <- pack xs]
 {% endhighlight %}
+
+Having made it through question nine, however, this problem is conceptually easier to solve. A new feature here in the list comprehensions, but it's pretty close to a set definition in maths, so it's not too bad really.
+
+
+And that's it! First ten down - only took 7 months. I'll ensure to get through the next ten more hastily next time.
