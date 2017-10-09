@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learning a Functional Language"
-date:   2017-01-28 15:22:20 +1100
+date:   2017-10-09 15:22:20 +1100
 categories: Learning Haskell
 comments: true
 ---
@@ -15,3 +15,7 @@ I'm going to work through [Learn You a Haskell for Great Good], and then look to
 [Ninety-Nine Lisp Problems]: http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html
 
 Time to tackle the literal Y combinator.
+
+
+*Edit - I got totally distracted by life/a job in Tasmania/my first consulting gig (!) that I let this blog go.
+No time like the present to push on though...
