@@ -131,7 +131,8 @@ encode :: Eq b => [b] -> [(Int, b)]
 encode (xs) = [(length x, head x) | x <- pack xs]
 {% endhighlight %}
 
-Having made it through question nine, however, this problem is conceptually easier to solve. A new feature here in the list comprehensions, but it's pretty close to a set definition in maths, so it's not too bad really.
+Having made it through question nine, however, this problem is conceptually easier to solve. A new feature here in the list comprehension in the last line of the function, but it's pretty close to a set definition in maths, so it's not too bad really.
 
-
+---
+<br>
 And that's it! First ten down - only took 7 months. I'll ensure to get through the next ten more hastily next time.
